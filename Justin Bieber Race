@@ -1,0 +1,28 @@
+// Check if the user is ready to play!
+confirm ("Are you ready to play")
+var age = prompt ("What's your age")
+var name = prompt ("What's your name")
+if (age<15) {
+    console.log (name + " you are too young for this game. This game is meant for responsible adults please dont continue any further as haven't learnt how to stop you yet")
+} else {
+    console.log(name + " I hope you enjoy the game")
+}
+
+console.log("You (" + name + ") are at a Justin Bieber concert, and you hear this lyric 'Lace my shoes off, start racing.'")
+console.log("Suddenly, Bieber stops points to you and says, 'Do you want to race me?'")
+var userAnswer = prompt ("Do you want to race Bieber on stage?")
+
+if (userAnswer === "yes") {
+    console.log("You and Bieber start racing. It's neck and neck! You win by a shoelace")
+} else {
+    console.log("Oh no! Bieber shakes his head and sings'" + name + " is a scaredy cat")
+    console.log("The crowd start laughing and jeering at you")
+}
+
+var feedback = prompt ("Please rate this game from 1-10")
+
+if (feedback>6) {
+    console.log ("Thank you! It is great isn't it")
+} else {
+    console.log ("Sad times :(")
+}
