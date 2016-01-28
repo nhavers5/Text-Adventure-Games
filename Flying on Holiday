@@ -1,0 +1,63 @@
+var numOfGames = prompt("How many games do you want to play?")
+var wins = 0
+for (var i = 0; i < numOfGames; i++) {
+    var userChoice = prompt("Do you choose rock, paper, scissors, lizard or spock?");
+    var computerChoice = Math.random();
+    if (computerChoice <= 0.2) {
+        computerChoice = "rock";
+    } else if (computerChoice <= 0.4 && computerChoice > 0.2) {
+        computerChoice = "paper";
+    } else if (computerChoice <= 0.6 && computerChoice > 0.4) {
+        computerChoice = "scissors";
+    } else if (computerChoice <= 0.8 && computerChoice > 0.6) {
+        computerChoice = "lizard"
+    } else {
+        computerChoice = "spock"
+    }
+    console.log("Computer: " + computerChoice);
+
+    var compare = function(choice1, choice2) {
+        if (choice1 === choice2) {
+            return "The result is a tie!";
+        } else if (choice1 === "rock") {
+            if (choice2 === "lizard" || choice2 === "scissors") {
+                return "Well done rocks wins"
+            } else {
+                return "Bad luck " + choice2 + " wins"
+            }
+        } else if (choice1 === "paper") {
+            if (choice2 === "rock" || choice2 === "spock") {
+                return "Well done paper wins"
+            } else {
+                return "Bad luck " + choice2 + " wins"
+            }
+        } else if (choice1 === "scissors") {
+            if (choice2 === "paper" || choice2 === "lizard") {
+                return "Well done scissors wins"
+            } else {
+                return "Bad luck " + choice2 + " wins"
+            }
+        } else if (choice1 === "lizard") {
+            if (choice2 === "paper" || choice2 === "spock") {
+                return "Well done lizard wins"
+            } else {
+                return "Bad luck " + choice2 + " wins"
+            }
+        } else if (choice1 === "spock") {
+            if (choice2 === "scissors" || choice2 === "rock") {
+                return "Well done spock wins"
+            } else {
+                return "Bad luck " + choice2 + " wins"
+            }
+        } else {
+            return "You have entered an inccorrect value and have now lost. Please try to be more careful next time"
+        }
+    };
+    var result = compare(userChoice, computerChoice)
+    console.log (result)
+    if (result.substring(0,1)==="W") {
+    wins = wins+1
+}
+}
+
+console.log("You have won "+wins+" games out of "+numOfGames)
