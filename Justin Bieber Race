@@ -3,7 +3,7 @@ confirm ("Are you ready to play")
 var age = prompt ("What's your age")
 var name = prompt ("What's your name")
 if (age<15) {
-    console.log (name + " you are too young for this game. This game is meant for responsible adults please dont continue any further as haven't learnt how to stop you yet")
+    console.log (name + " you are too young for this game! This game is meant for responsible adults please dont continue any further as haven't learnt how to stop you yet")
 } else {
     console.log(name + " I hope you enjoy the game")
 }
